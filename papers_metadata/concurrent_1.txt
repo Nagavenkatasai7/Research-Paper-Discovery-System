@@ -1,0 +1,10 @@
+# nnU-Net: a self-configuring method for deep learning-based biomedical image segmentation
+
+**Authors:** Fabian Isensee, P. Jaeger, Simon A. A. Kohl, Jens Petersen, Klaus Hermann Maier-Hein
+
+**Year:** 2020 | **Venue:** Nature Methods
+
+**Citations:** 6,657 (Influential: 647)
+
+
+**DOI:** 10.1038/s41592-020-01008-z

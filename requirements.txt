@@ -1,0 +1,67 @@
+# Core Web Framework
+streamlit==1.31.0
+
+# LLM and AI APIs
+anthropic==0.68.1
+openai==1.109.1
+
+# PDF Processing and Generation
+fpdf2==2.8.5
+PyPDF2==3.0.1
+pypdf==5.9.0
+pdfplumber==0.11.7
+PyMuPDF==1.26.5
+pymupdf4llm==0.0.27
+
+# RAG System Components
+langchain==0.3.27
+langchain-community==0.3.30
+langchain-core==0.3.79
+langchain-openai==0.3.33
+langchain-text-splitters==0.3.11
+chromadb==1.1.1
+faiss-cpu==1.12.0
+lancedb==0.25.1
+
+# Multi-Agent System
+crewai==0.201.1
+crewai-tools==0.75.0
+
+# Web Scraping and HTTP
+beautifulsoup4==4.12.3
+requests==2.32.5
+selenium==4.35.0
+playwright==1.55.0
+lxml==5.1.0
+aiohttp==3.9.3
+
+# Academic APIs
+arxiv==2.3.0
+semanticscholar==0.8.4
+feedparser==6.0.12
+
+# Data Processing
+pandas==2.2.0
+numpy==1.26.3
+pyarrow==21.0.0
+
+# NLP and Text Processing
+spacy==3.8.7
+nltk==3.9.2
+sentence-transformers==2.3.1
+transformers==4.56.2
+tiktoken==0.11.0
+torch==2.8.0
+
+# Database
+aiosqlite==0.21.0
+asyncio==4.0.0
+
+# Environment and Configuration
+python-dotenv==1.2.1
+
+# Additional Utilities
+Pillow==10.4.0
+python-dateutil==2.9.0.post0
+pydantic==2.11.9
+ollama==0.2.1

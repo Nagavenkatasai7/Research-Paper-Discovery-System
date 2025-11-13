@@ -1,0 +1,18 @@
+# Evolution of Quantum Computing: Theoretical and Innovation Management Implications for Emerging Quantum Industry
+
+**Authors:** M. Coccia, S. Roshani, M. Mosleh
+
+**Year:** 2024 | **Venue:** IEEE transactions on engineering management
+
+**Citations:** 62 (Influential: 4)
+
+
+## TL;DR (AI Summary)
+It is suggested that the network of quantum computing has a transition from hardware to software research that supports accelerated evolution of technological pathways in quantum image processing, quantum machine learning, and quantum sensors.
+
+
+## Abstract
+Quantum computing is a vital research field in science and technology. One of the fundamental questions hardly known is how quantum computing research is developing to support scientific advances and the evolution of path-breaking technologies for economic, industrial, and social change. This study confronts the question here by applying methods of computational scientometrics for publication analyses to explain the structure and evolution of quantum computing research and technologies over a 30-year period. Results reveal that the evolution of quantum computing from 1990 to 2020 has a considerable average increase of connectivity in the network (growth of degree centrality measure), a moderate increase of the average influence of nodes on the flow between nodes (little growth of betweenness centrality measure), and a little reduction of the easiest access of each node to all other nodes (closeness centrality measure). This evolutionary dynamics is due to the increase in size and complexity of the network in quantum computing research over time. This study also suggests that the network of quantum computing has a transition from hardware to software research that supports accelerated evolution of technological pathways in quantum image processing, quantum machine learning, and quantum sensors. Theoretical implications of this study show the morphological evolution of the network in quantum computing from a symmetric to an asymmetric shape driven by new inter-related research fields and emerging technological trajectories. Findings here suggest best practices of innovation management based on R&D investments in new technological directions of quantum computing having a high potential for growth and impact in science and markets.
+
+
+**DOI:** 10.1109/TEM.2022.3175633

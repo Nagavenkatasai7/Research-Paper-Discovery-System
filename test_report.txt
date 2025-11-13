@@ -1,0 +1,38 @@
+
+======================================================================
+                    TEST SUITE REPORT
+======================================================================
+
+Total Tests:    18
+Passed:         15 (83.3%)
+Failed:         3
+
+Test Results:
+----------------------------------------------------------------------
+✅ PASS | Module Imports (0.00s)
+✅ PASS | Configuration (0.00s)
+✅ PASS | Utility Functions (0.00s)
+❌ FAIL | Semantic Scholar API (61.27s)
+    Error: No results from Semantic Scholar
+✅ PASS | arXiv API (2.27s)
+❌ FAIL | OpenAlex API (1.57s)
+    Error: No results from OpenAlex
+✅ PASS | Crossref API (0.39s)
+✅ PASS | Quality Scorer (0.00s)
+✅ PASS | Paper Filters (0.00s)
+✅ PASS | LLM Client (4.88s)
+✅ PASS | Paper Analyzer (7.39s)
+✅ PASS | Query Assistant (3.68s)
+✅ PASS | Orchestrator Init (0.01s)
+✅ PASS | Parallel Search (36.10s)
+✅ PASS | Multi-API Search (6.36s)
+❌ FAIL | Data Consistency (0.82s)
+    Error: No results for consistency test
+✅ PASS | Error Handling (0.00s)
+✅ PASS | Cache Operations (0.00s)
+
+======================================================================
+⚠️  3 test(s) failed. Review errors above.
+======================================================================
+
+Test completed at: 2025-10-30 00:02:07.034563

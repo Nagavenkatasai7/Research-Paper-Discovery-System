@@ -1,0 +1,20 @@
+# Quantum computing with Qiskit
+
+**Authors:** Ali Javadi-Abhari, Matthew Treinish, Kevin Krsulich, Christopher J. Wood, Jake Lishman, Julien Gacon, S. Martiel, P. Nation, Lev S. Bishop, Andrew W. Cross, Blake R. Johnson, J. Gambetta
+
+**Year:** 2024 | **Venue:** arXiv.org
+
+**Citations:** 489 (Influential: 46)
+
+
+## TL;DR (AI Summary)
+An end-to-end workflow for solving a problem in condensed matter physics on a quantum computer that serves to highlight some of Qiskit's capabilities, for example the representation and optimization of circuits at various abstraction levels, its scalability and retargetability to new gates, and the use of quantum-classical computations via dynamic circuits.
+
+
+## Abstract
+We describe Qiskit, a software development kit for quantum information science. We discuss the key design decisions that have shaped its development, and examine the software architecture and its core components. We demonstrate an end-to-end workflow for solving a problem in condensed matter physics on a quantum computer that serves to highlight some of Qiskit's capabilities, for example the representation and optimization of circuits at various abstraction levels, its scalability and retargetability to new gates, and the use of quantum-classical computations via dynamic circuits. Lastly, we discuss some of the ecosystem of tools and plugins that extend Qiskit for various tasks, and the future ahead.
+
+
+**DOI:** 10.48550/arXiv.2405.08810
+
+**arXiv ID:** 2405.08810

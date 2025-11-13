@@ -1,0 +1,18 @@
+# Recent Advances in Quantum Computing for Drug Discovery and Development
+
+**Authors:** Pei-Hua Wang, Jen-Hao Chen, Yu-Yuan Yang, Chien-shiun Lee, Y. Tseng
+
+**Year:** 2023 | **Venue:** IEEE Nanotechnology Magazine
+
+**Citations:** 50 (Influential: 1)
+
+
+## TL;DR (AI Summary)
+The main steps in drug discovery and development are introduced and how computers help to find potential drug candidates and the quantum advantage is demonstrated on hybrid systems and quantum-inspired devices such as quantum annealers.
+
+
+## Abstract
+Drug discovery and development is a time-consuming and cost-intensive process. Computer-aided drug design can speed up the timeline and reduce costs by decreasing the number of necessary biochemical experiments. The number of studies using quantum computing to solve problems in drug development has been increasing in recent years. In this review, we briefly introduce the main steps in drug discovery and development and how computers help to find potential drug candidates. Recent studies of quantum computing in drug development based on the structure of target proteins are listed chronologically. They include protein structure prediction, molecular docking, quantum simulation, and quantitative structure-activity relationship (QSAR) models. Current quantum devices are still susceptible to noise and error but are well suited for hybrid quantum-classical algorithms. The quantum advantage is demonstrated on hybrid systems and quantum-inspired devices such as quantum annealers. We hope to see more applications of quantum computing in the field of drug discovery and development.
+
+
+**DOI:** 10.1109/MNANO.2023.3249499

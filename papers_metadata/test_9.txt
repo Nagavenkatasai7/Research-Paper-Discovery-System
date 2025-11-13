@@ -1,0 +1,20 @@
+# The MQT Handbook : A Summary of Design Automation Tools and Software for Quantum Computing
+
+**Authors:** Robert Wille, Lucas Berent, Tobias Forster, Jagatheesan Kunasaikaran, Kevin Mato, Tom Peham, Nils Quetschlich, Damian Rovara, Aaron Sander, Ludwig Schmid, Daniel Schönberger, Yannick Stade, Lukas Burgholzer
+
+**Year:** 2024 | **Venue:** 2024 IEEE International Conference on Quantum Software (QSW)
+
+**Citations:** 44 (Influential: 0)
+
+
+## TL;DR (AI Summary)
+The Munich Quantum Toolkit (MQT) is a collection of software tools for quantum computing developed by the Chair for Design Automation at the Technical University of Munich which explicitly utilizes this design automation expertise.
+
+
+## Abstract
+Quantum computers are becoming a reality and numerous quantum computing applications with a near-term perspective (e.g., for finance, chemistry, machine learning, and optimization) and with a long-term perspective (e.g., for cryptography or unstructured search) are currently being investigated. However, designing and realizing potential applications for these devices in a scalable fashion requires automated, efficient, and user-friendly software tools that cater to the needs of end users, engineers, and physicists at every level of the entire quantum software stack. Many of the problems to be tackled in that regard are similar to design problems from the classical realm for which sophisticated design automation tools have been developed in the previous decades.The Munich Quantum Toolkit (MQT) is a collection of software tools for quantum computing developed by the Chair for Design Automation at the Technical University of Munich which explicitly utilizes this design automation expertise. Our overarching objective is to provide solutions for design tasks across the entire quantum software stack. This entails high-level support for end users in realizing their applications, efficient methods for the classical simulation, compilation, and verification of quantum circuits, tools for quantum error correction, support for physical design, and more. These methods are supported by corresponding data structures (such as decision diagrams or the ZX-calculus) and core methods (such as SAT encodings/solvers). All of the developed tools are available as open-source implementations and are hosted on github.com/cda-tum.Note: A live version of this document is available at mqt.readthedocs.io.
+
+
+**DOI:** 10.1109/QSW62656.2024.00013
+
+**arXiv ID:** 2405.17543

@@ -1,0 +1,14 @@
+# Development and Validation of a Deep Learning Algorithm for Detection of Diabetic Retinopathy in Retinal Fundus Photographs.
+
+**Authors:** Varun Gulshan, L. Peng, Marc Coram, Martin C. Stumpe, Derek J. Wu, Arunachalam Narayanaswamy, Subhashini Venugopalan, Kasumi Widner, T. Madams, Jorge A Cuadros, R. Kim, R. Raman, Philip Nelson, J. Mega, D. Webster
+
+**Year:** 2016 | **Venue:** Journal of the American Medical Association (JAMA)
+
+**Citations:** 6,174 (Influential: 216)
+
+
+## TL;DR (AI Summary)
+An algorithm based on deep machine learning had high sensitivity and specificity for detecting referable diabetic retinopathy and diabetic macular edema in retinal fundus photographs from adults with diabetes.
+
+
+**DOI:** 10.1001/jama.2016.17216

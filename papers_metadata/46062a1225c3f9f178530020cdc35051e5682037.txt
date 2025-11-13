@@ -1,0 +1,16 @@
+# A manufacturable platform for photonic quantum computing
+
+**Authors:** Koen Avishai Dylan Damien Stanley Ben Hugo Geoff Gabrie Alexander Benyamini Black Bonneau Burgos Burridge , Koen Alexander, A. Benyamini, Dylan Black, D. Bonneau, S. Burgos, Ben M. Burridge, Hugo Cable, Geoff Campbell, Gabriel Catalano, Alejandro Ceballos, Chia-Ming Chang, Sourav Sen Choudhury, C. J. Chung, Fariba Danesh, Tom Dauer, Michael Davis, Eric Dudley, Er-Xuan Ping, Josep Fargas, A. Farsi, Colleen Fenrich, Jonathan Frazer, Masaya Fukami, Y. Ganesan, Gary Gibson, Mercedes Gimeno-Segovia, Sebastian Goeldi, Patrick S. Goley, Ryan Haislmaier, Sami Halimi, Paul Hansen, Sam Hardy, Jason Horng, Matthew House, Hong Hu, M. Jadidi, Vijay Jain, Henrik Johansson, Thomas Jones, V. Kamineni, N. Kelez, Ravi Koustuban, G. Kovall, P. Krogen, Nikhil Kumar, Yong Liang, N. Licausi, D. Llewellyn, K. Lokovic, Michael Lovelady, V. Manfrinato, A. Melnichuk, G. Mendoza, Brad Moores, Shaunak Mukherjee, J. Munns, François-Xavier Musalem, F. Najafi, Jeremy L. O'Brien, J. Ortmann, Sunil Pai, Bryan Park, Hsuan-Tung Peng, N. Penthorn, Brennan Peterson, Gabriel Peterson, Matt Poush, G. J. Pryde, Tarun Ramprasad, Gareth Ray, A. Rodriguez, B. Roxworthy, T. Rudolph, D. J. Saunders, P. Shadbolt, Deesha Shah, Andrea Bahgat Shehata, Hyungki Shin, Jeffrey Sinsky, Jake Smith, Ben Sohn, Young-Ik Sohn, Gyeongho Son, Mario Souza, Chris Sparrow, M. Staffaroni, C. Stavrakas, Vijay Sukumaran, D. Tamborini, Mark G. Thompson, Khanh Tran, Mark Triplett, Maryann Tung, A. Veitia, Alexey Vert, M. Vidrighin, I. Vorobeichik, Peter Weigel, Matthew Wingert, Jamie P. Wooding, Xinran Zhou
+
+**Year:** 2024 | **Venue:** Nature
+
+**Citations:** 122 (Influential: 15)
+
+
+## Abstract
+Although holding great promise for low noise, ease of operation and networking1, useful photonic quantum computing has been precluded by the need for beyond-state-of-the-art components, manufactured by the millions2, 3, 4, 5–6. Here we introduce a manufacturable platform7 for quantum computing with photons. We benchmark a set of monolithically integrated silicon-photonics-based modules to generate, manipulate, network and detect heralded photonic qubits, demonstrating dual-rail photonic qubits with 99.98% ± 0.01% state preparation and measurement fidelity, Hong–Ou–Mandel (HOM) quantum interference between independent photon sources with 99.50% ± 0.25% visibility, two-qubit fusion with 99.22% ± 0.12% fidelity and a chip-to-chip qubit interconnect with 99.72% ± 0.04% fidelity, conditional on photon detection and not accounting for loss. We preview a selection of next-generation technologies: low-loss silicon nitride (SiN) waveguides and components to address loss, as well as fabrication-tolerant photon sources, high-efficiency photon-number-resolving detectors (PNRDs), low-loss chip-to-fibre coupling and barium titanate (BTO) electro-optic phase shifters for high-performance fast switching. A manufacturable platform for quantum computing with photons is introduced and a set of monolithically integrated silicon-photonics-based modules is benchmarked, demonstrating dual-rail photonic qubits with performance close to thresholds required for operation.
+
+
+**DOI:** 10.1038/s41586-025-08820-7
+
+**arXiv ID:** 2404.17570

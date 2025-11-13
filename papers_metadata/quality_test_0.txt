@@ -1,0 +1,14 @@
+# Physics-informed machine learning
+
+**Authors:** G. Karniadakis, I. Kevrekidis, Lu Lu, P. Perdikaris, Sifan Wang, Liu Yang
+
+**Year:** 2021 | **Venue:** Nature Reviews Physics
+
+**Citations:** 4,694 (Influential: 141)
+
+
+## TL;DR (AI Summary)
+Some of the prevailing trends in embedding physics into machine learning are reviewed, some of the current capabilities and limitations are presented and diverse applications of physics-informed learning both for forward and inverse problems, including discovering hidden physics and tackling high-dimensional problems are discussed.
+
+
+**DOI:** 10.1038/s42254-021-00314-5

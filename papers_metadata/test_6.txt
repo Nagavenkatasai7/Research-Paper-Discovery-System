@@ -1,0 +1,20 @@
+# Distributed quantum computing across an optical network link
+
+**Authors:** D. Main, P. Drmota, D. P. Nadlinger, E. Ainley, A. Agrawal, B. C. Nichol, R. Srinivas, G. Araneda, D. M. Lucas
+
+**Year:** 2024 | **Venue:** Nature
+
+**Citations:** 108 (Influential: 7)
+
+
+## TL;DR (AI Summary)
+This work experimentally demonstrates the distribution of quantum computations between two photonically interconnected trapped-ion modules, and implements distributed iSWAP and SWAP circuits, compiled with 2 and 3 instances of QGT, demonstrating the ability to distribute arbitrary two-qubit operations.
+
+
+## Abstract
+Distributed quantum computing (DQC) combines the computing power of multiple networked quantum processing modules, ideally enabling the execution of large quantum circuits without compromising performance or qubit connectivity1,2. Photonic networks are well suited as a versatile and reconfigurable interconnect layer for DQC; remote entanglement shared between matter qubits across the network enables all-to-all logical connectivity through quantum gate teleportation (QGT)3,4. For a scalable DQC architecture, the QGT implementation must be deterministic and repeatable; until now, no demonstration has satisfied these requirements. Here we experimentally demonstrate the distribution of quantum computations between two photonically interconnected trapped-ion modules. The modules, separated by about two metres, each contain dedicated network and circuit qubits. By using heralded remote entanglement between the network qubits, we deterministically teleport a controlled-Z (CZ) gate between two circuit qubits in separate modules, achieving 86% fidelity. We then execute Grover’s search algorithm5—to our knowledge, the first implementation of a distributed quantum algorithm comprising several non-local two-qubit gates—and measure a 71% success rate. Furthermore, we implement distributed iSWAP and SWAP circuits, compiled with two and three instances of QGT, respectively, demonstrating the ability to distribute arbitrary two-qubit operations6. As photons can be interfaced with a variety of systems, the versatile DQC architecture demonstrated here provides a viable pathway towards large-scale quantum computing for a range of physical platforms. The distribution of quantum computations is demonstrated between two photonically interconnected trapped-ion modules, using repeatable, deterministic teleported controlled-Z gates to perform Grover’s search algorithm.
+
+
+**DOI:** 10.1038/s41586-024-08404-x
+
+**arXiv ID:** 2407.00835

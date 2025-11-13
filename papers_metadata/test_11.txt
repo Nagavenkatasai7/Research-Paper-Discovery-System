@@ -1,0 +1,20 @@
+# Quantum computing for finance
+
+**Authors:** Dylan Herman, Cody Googin, Xiaoyuan Liu, Yue Sun, A. Galda, Ilya Safro, Marco Pistoia, Y. Alexeev
+
+**Year:** 2023 | **Venue:** Nature Reviews Physics
+
+**Citations:** 168 (Influential: 2)
+
+
+## TL;DR (AI Summary)
+The classical techniques used by the financial industry is outlined and the potential advantages and limitations of quantum techniques are discussed, as well as challenges that physicists could help tackle.
+
+
+## Abstract
+Quantum computers are expected to surpass classical computers and transform industries. This Review focuses on quantum computing for financial applications and provides a summary for physicists on potential advantages and limitations of quantum techniques, as well as challenges that physicists could help tackle. Quantum algorithms for stochastic modelling, optimization and machine learning are applicable to various financial problems. Quantum Monte Carlo integration and gradient estimation can provide quadratic speedup over classical methods, but more work is required to reduce the amount of quantum resources for early fault-tolerant feasibility and achieving an actual speedup. Financial optimization problems can be continuous (convex or non-convex), discrete or mixed, and thus quantum algorithms for these problems can be applied. The advantages and challenges of quantum machine learning for classical problems are also apparent in finance. Quantum computers are expected to surpass the computational capabilities of classical computers and have a transformative impact on numerous industry sectors. We present a comprehensive summary of the state of the art of quantum computing for financial applications, with particular emphasis on stochastic modelling, optimization and machine learning. This Review is aimed at physicists, so it outlines the classical techniques used by the financial industry and discusses the potential advantages and limitations of quantum techniques. Finally, we look at the challenges that physicists could help tackle.
+
+
+**DOI:** 10.1038/s42254-023-00603-1
+
+**arXiv ID:** 2307.11230

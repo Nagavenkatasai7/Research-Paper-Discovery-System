@@ -1,0 +1,23 @@
+# The state of quantum computing applications in health and medicine
+
+**Authors:** Frederik F. Flöther
+
+**Year:** 2023 | **Venue:** Research Directions: Quantum Technologies
+
+**Citations:** 71 (Influential: 2)
+
+
+## TL;DR (AI Summary)
+Clinical and medical proof-of-concept quantum computing applications are outlined and put into perspective, and an outlook on medicine in the quantum era is provided.
+
+
+## Abstract
+
+ Quantum computing hardware and software have made enormous strides over the last years1. Questions around quantum computing’s impact on research and society have changed from “if” to “when/how”. The 2020s have been described as the “quantum decade”, and the first production solutions that drive scientific and business value are expected to become available over the next years. Medicine, including fields in healthcare and life sciences, has seen a flurry of quantum-related activities and experiments in the last few years (although medicine and quantum theory have arguably been entangled ever since Schrödinger’s cat2). The initial focus was on biochemical and computational biology problems3,4,5,6,7,8; recently, however, clinical and medical quantum solutions have drawn increasing interest. The rapid emergence of quantum computing in health and medicine necessitates a mapping of the landscape.
+ In this review, clinical and medical proof-of-concept quantum computing applications are outlined and put into perspective. These consist of over 40 experimental and theoretical studies from the last few years. The use case areas span genomics, clinical research and discovery, diagnostics, and treatments and interventions. Quantum machine learning (QML) in particular has rapidly evolved and shown to be competitive with classical benchmarks in recent medical research. Near-term QML algorithms, for instance, quantum support vector classifiers and quantum neural networks, have been trained with diverse clinical and real-world data sets. This includes studies in generating new molecular entities as drug candidates, diagnosing based on medical image classification, predicting patient persistence, forecasting treatment effectiveness, and tailoring radiotherapy. The use cases and the applied algorithms are summarized.
+ In addition, this review provides an outlook on medicine in the quantum era. There has been much discussion about healthcare’s journey towards precision medicine and the quadruple aim (better health, lower costs, enhanced patient experiences, and improved healthcare practitioner work lives)9. While a range of technical and ethical challenges remain, quantum computing is poised to become a key enabler for advancing towards the holy grail: keeping people healthy through proactive medical care and guidance at the level of an individual.
+
+
+**DOI:** 10.1017/qut.2023.4
+
+**arXiv ID:** 2301.09106

@@ -1,0 +1,20 @@
+# A Modular Quantum Compilation Framework for Distributed Quantum Computing
+
+**Authors:** Davide Ferrari, S. Carretta, M. Amoretti
+
+**Year:** 2023 | **Venue:** IEEE Transactions on Quantum Engineering
+
+**Citations:** 56 (Influential: 1)
+
+
+## TL;DR (AI Summary)
+A modular quantum compilation framework for DQC that takes into account both network and device constraints and characteristics is presented and implemented and tested a quantum compiler based on the proposed framework, considering different network topologies, with quantum processors characterized by heavy-hexagon coupling maps.
+
+
+## Abstract
+For most practical applications, quantum algorithms require large resources in terms of qubit number, much larger than those available with current noisy intermediate-scale quantum processors. With the network and communication functionalities provided by the quantum Internet, distributed quantum computing (DQC) is considered as a scalable approach for increasing the number of available qubits for computational tasks. For DQC to be effective and efficient, a quantum compiler must find the best partitioning for the quantum algorithm and then perform smart remote operation scheduling to optimize Einstein–Podolsky–Rosen (EPR) pair consumption. At the same time, the quantum compiler should also find the best local transformation for each partition. In this article, we present a modular quantum compilation framework for DQC that takes into account both network and device constraints and characteristics. We implemented and tested a quantum compiler based on the proposed framework with some circuits of interest, such as the VQE and QFT ones, considering different network topologies, with quantum processors characterized by heavy-hexagon coupling maps. We also devised a strategy for remote scheduling that can exploit both TeleGate and TeleData operations and tested the impact of using either only TeleGates or both. The evaluation results show that TeleData operations can have a positive impact on the number of consumed EPR pairs, depending on the characteristic of compiled circuit. Meanwhile, choosing a more connected network topology helps reduce the number of layers dedicated to remote operations.
+
+
+**DOI:** 10.1109/TQE.2023.3303935
+
+**arXiv ID:** 2305.02969

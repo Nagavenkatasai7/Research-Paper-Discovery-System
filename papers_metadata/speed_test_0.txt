@@ -1,0 +1,14 @@
+# Finding Chaos in Noisy Systems
+
+**Authors:** Douglas Nychkatl, S. Ellner, Daniel Mccaftrey, A. R. Gallanl, Douglas Nychkat, S. Ellner, D. McCaffrey, A. Gallant, Neural Networks
+
+**Year:** 1992 | **Venue:** Unknown
+
+**Citations:** 330 (Influential: 22)
+
+
+## TL;DR (AI Summary)
+Using nonparametric regression techniques (Neural Networks and Thin Plate Splines) it is possible to consistently estimate the dominant Lyapunov exponent (LE), and these methods have been studied using simulated data and applied to a biological time series: marten fur returns for the Hudson Bay Company.
+
+
+**DOI:** 10.1111/J.2517-6161.1992.TB01889.X

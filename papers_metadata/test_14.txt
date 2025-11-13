@@ -1,0 +1,16 @@
+# Splitting phonons: Building a platform for linear mechanical quantum computing
+
+**Authors:** Hong Qiao, É. Dumur, Gustav Andersson, Haoxiong Yan, M. Chou, J. Grebel, C. Conner, Yash J. Joshi, Jacob M. Miller, R. Povey, Xuntao Wu, Andrew N. Cleland
+
+**Year:** 2023 | **Venue:** Science
+
+**Citations:** 73 (Influential: 4)
+
+
+## Abstract
+Linear optical quantum computing provides a desirable approach to quantum computing, with only a short list of required computational elements. The similarity between photons and phonons points to the interesting potential for linear mechanical quantum computing using phonons in place of photons. Although single-phonon sources and detectors have been demonstrated, a phononic beam splitter element remains an outstanding requirement. Here we demonstrate such an element, using two superconducting qubits to fully characterize a beam splitter with single phonons. We further use the beam splitter to demonstrate two-phonon interference, a requirement for two-qubit gates in linear computing. This advances a new solid-state system for implementing linear quantum computing, further providing straightforward conversion between itinerant phonons and superconducting qubits. Description Editor’s summary Phonons are the fundamental quantum vibrations within materials, with individual phonons representing the collective motion of many trillions of atoms. Efforts are underway to determine whether these mechanical vibrations can be developed into a quantum-computing architecture just like their optical cousin, photons. Qiao et al. demonstrate a beam splitter for single phonons and controlled two-phonon interference. Adding to the ability to launch and detect single phonons, a beam splitter now provides the final piece in the toolbox to develop a mechanically based platform for quantum computing. —Ian S. Osborne A beam splitter for phonons completes the toolbox required to develop a mechanically based quantum computing system.
+
+
+**DOI:** 10.1126/science.adg8715
+
+**arXiv ID:** 2302.07791

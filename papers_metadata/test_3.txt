@@ -1,0 +1,14 @@
+# A versatile single-photon-based quantum computing platform
+
+**Authors:** N. Maring, A. Fyrillas, M. Pont, Edouard Ivanov, Petr Stepanov, N. Margaria, W. Hease, A. Pishchagin, Aristide Lemaître, Isabelle Sagnes, Thi Huong Au, S. Boissier, Eric Bertasi, Aur'elien Baert, Mario Valdivia, Marie Billard, Ozan Acar, A. Brieussel, R. Mezher, S. Wein, A. Salavrakos, Patrick Sinnott, D. Fioretto, P. Emeriau, N. Belabas, S. Mansfield, P. Senellart, J. Senellart, N. Somaschi
+
+**Year:** 2024 | **Venue:** Nature Photonics
+
+**Citations:** 168 (Influential: 4)
+
+
+## Abstract
+Quantum computing aims at exploiting quantum phenomena to efficiently perform computations that are unfeasible even for the most powerful classical supercomputers. Among the promising technological approaches, photonic quantum computing offers the advantages of low decoherence, information processing with modest cryogenic requirements, and native integration with classical and quantum networks. So far, quantum computing demonstrations with light have implemented specific tasks with specialized hardware, notably Gaussian boson sampling, which permits the quantum computational advantage to be realized. Here we report a cloud-accessible versatile quantum computing prototype based on single photons. The device comprises a high-efficiency quantum-dot single-photon source feeding a universal linear optical network on a reconfigurable chip for which hardware errors are compensated by a machine-learned transpilation process. Our full software stack allows remote control of the device to perform computations via logic gates or direct photonic operations. For gate-based computation, we benchmark one-, two- and three-qubit gates with state-of-the art fidelities of 99.6 ± 0.1%, 93.8 ± 0.6% and 86 ± 1.2%, respectively. We also implement a variational quantum eigensolver, which we use to calculate the energy levels of the hydrogen molecule with chemical accuracy. For photon native computation, we implement a classifier algorithm using a three-photon-based quantum neural network and report a six-photon boson sampling demonstration on a universal reconfigurable integrated circuit. Finally, we report on a heralded three-photon entanglement generation, a key milestone toward measurement-based quantum computing. A versatile cloud-accessible single-photon-based quantum computing machine is developed, which shows a six-photon sampling rate of 4 Hz over weeks. Heralded generation of a three-photon Greenberger–Horne–Zeilinger state—a key milestone toward measurement-based quantum computing—is implemented.
+
+
+**DOI:** 10.1038/s41566-024-01403-4

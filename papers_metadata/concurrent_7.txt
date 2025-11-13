@@ -1,0 +1,20 @@
+# Deep Learning with Differential Privacy
+
+**Authors:** Martín Abadi, Andy Chu, I. Goodfellow, H. B. McMahan, Ilya Mironov, Kunal Talwar, Li Zhang
+
+**Year:** 2016 | **Venue:** Conference on Computer and Communications Security
+
+**Citations:** 6,667 (Influential: 1,282)
+
+
+## TL;DR (AI Summary)
+This work develops new algorithmic techniques for learning and a refined analysis of privacy costs within the framework of differential privacy, and demonstrates that deep neural networks can be trained with non-convex objectives, under a modest privacy budget, and at a manageable cost in software complexity, training efficiency, and model quality.
+
+
+## Abstract
+Machine learning techniques based on neural networks are achieving remarkable results in a wide variety of domains. Often, the training of models requires large, representative datasets, which may be crowdsourced and contain sensitive information. The models should not expose private information in these datasets. Addressing this goal, we develop new algorithmic techniques for learning and a refined analysis of privacy costs within the framework of differential privacy. Our implementation and experiments demonstrate that we can train deep neural networks with non-convex objectives, under a modest privacy budget, and at a manageable cost in software complexity, training efficiency, and model quality.
+
+
+**DOI:** 10.1145/2976749.2978318
+
+**arXiv ID:** 1607.00133

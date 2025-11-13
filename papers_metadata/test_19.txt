@@ -1,0 +1,29 @@
+# Towards Adiabatic Quantum Computing Using Compressed Quantum Circuits
+
+**Authors:** Conor Mc Keever, M. Lubasch
+
+**Year:** 2023 | **Venue:** PRX Quantum
+
+**Citations:** 52 (Influential: 0)
+
+
+## TL;DR (AI Summary)
+Tensor network algorithms to optimize quantum circuits for adiabatic quantum computing and include counterdiabatic driving in the optimization and utilize variational matrix product operators to represent adiabatic gauge potentials are described.
+
+
+## Abstract
+We describe tensor network algorithms to optimize quantum circuits for adiabatic quantum computing. To suppress diabatic transitions, we include counterdiabatic driving in the optimization and utilize variational matrix product operators to represent adiabatic gauge potentials. Traditionally, Trotter product formulas are used to turn adiabatic time evolution into quantum circuits and the addition of counterdiabatic driving increases the circuit depth per time step. Instead, we classically optimize a parameterized quantum circuit of fixed depth to simultaneously capture adiabatic evolution together with counterdiabatic driving over many time steps. The methods are applied to the ground-state preparation of quantum Ising chains with transverse and longitudinal fields. We show that the classically optimized circuits can significantly outperform Trotter product formulas. Additionally, we discuss how the approach can be used for combinatorial optimization.
+ 
+ 
+ 
+ 
+ Published by the American Physical Society
+ 2024
+ 
+ 
+
+
+
+**DOI:** 10.1103/PRXQuantum.5.020362
+
+**arXiv ID:** 2311.05544

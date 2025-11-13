@@ -1,0 +1,29 @@
+# Early Fault-Tolerant Quantum Computing
+
+**Authors:** Amara Katabarwa, Katerina Gratsea, Athena Caesura, Peter D. Johnson
+
+**Year:** 2023 | **Venue:** PRX Quantum
+
+**Citations:** 63 (Influential: 2)
+
+
+## TL;DR (AI Summary)
+It is argued for the perspective that this transition period will be characterized by a law of diminishing returns in quantum error correction (QEC), where the ability of the architecture to maintain quality operations at scale determines the point of diminishing returns.
+
+
+## Abstract
+In recent years, research in quantum computing has largely focused on two approaches: near-term intermediate-scale quantum (NISQ) computing and future fault-tolerant quantum computing (FTQC). A growing body of research into early fault-tolerant quantum computing (EFTQC) is exploring how to utilize quantum computers during the transition between these two eras. However, without agreed-upon characterizations of this transition, it is unclear how best to utilize EFTQC architectures. We argue for the perspective that this transition period will be characterized by a law of diminishing returns in quantum error correction (QEC), where the ability of the architecture to maintain quality operations at scale determines the point of diminishing returns. Two challenges emerge from this picture: how to model this phenomenon of diminishing return of QEC as the performance of devices is continually improving and how to design algorithms to make the most use of these devices. To address these challenges, we present models for the performance of EFTQC architectures, capturing the diminishing returns of QEC. We then use these models to elucidate the regimes in which algorithms suited to such architectures are advantageous. As a concrete example, we show that for the canonical task of phase estimation, in a regime of moderate scalability and using just over one million physical qubits, the “reach” of the quantum computer can be extended (compared to the standard approach) from 90-qubit instances to over 130-qubit instances using a simple early fault-tolerant quantum algorithm, which reduces the number of operations per circuit by a factor of 100 and increases the number of circuit repetitions by a factor of 10 000. This clarifies the role that such algorithms might play in the era of limited-scalability quantum computing.
+ 
+ 
+ 
+ 
+ Published by the American Physical Society
+ 2024
+ 
+ 
+
+
+
+**DOI:** 10.1103/PRXQuantum.5.020101
+
+**arXiv ID:** 2311.14814

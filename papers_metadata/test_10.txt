@@ -1,0 +1,29 @@
+# Quantum Computing for High-Energy Physics: State of the Art and Challenges
+
+**Authors:** A. D. Meglio, K. Jansen, I. Tavernelli, C. Alexandrou, Srinivasan Arunachalam, C. Bauer, K. Borras, S. Carrazza, Arianna Crippa, V. Croft, R. D. Putter, Andrea Delgado, V. Dunjko, D. Egger, E. Fernández-Combarro, Elina Fuchs, L. Funcke, D. González-Cuadra, M. Grossi, Jad C. Halimeh, Zoe Holmes, S. Kuhn, D. Lacroix, R. Lewis, D. Lucchesi, Miriam Lucio Martínez, F. Meloni, Antonio Mezzacapo, S. Montangero, Lento Nagano, V. Radescu, Enrique Rico Ortega, A. Roggero, Julian Schuhmacher, J. Seixas, P. Silvi, P. Spentzouris, F. Tacchino, K. Temme, K. Terashi, Jordi Tura i Brugués, Cenk Tüysüz, S. Vallecorsa, U. Wiese, Shinjae Yoo, Jinglei Zhang
+
+**Year:** 2023 | **Venue:** PRX Quantum
+
+**Citations:** 208 (Influential: 2)
+
+
+## TL;DR (AI Summary)
+The status of high-energy physics quantum computations are provided and examples of theoretical and experimental target benchmark applications, which can be addressed in the near future are given and resource estimates are provided for the examples given using error-mitigated quantum computing.
+
+
+## Abstract
+Quantum computers offer an intriguing path for a paradigmatic change of computing in the natural sciences and beyond, with the potential for achieving a so-called quantum advantage—namely, a significant (in some cases exponential) speedup of numerical simulations. The rapid development of hardware devices with various realizations of qubits enables the execution of small-scale but representative applications on quantum computers. In particular, the high-energy physics community plays a pivotal role in accessing the power of quantum computing, since the field is a driving source for challenging computational problems. This concerns, on the theoretical side, the exploration of models that are very hard or even impossible to address with classical techniques and, on the experimental side, the enormous data challenge of newly emerging experiments, such as the upgrade of the Large Hadron Collider. In this Roadmap paper, led by CERN, DESY, and IBM, we provide the status of high-energy physics quantum computations and give examples of theoretical and experimental target benchmark applications, which can be addressed in the near future. Having in mind hardware with about 100 qubits capable of executing several thousand two-qubit gates, where possible, we also provide resource estimates for the examples given using error-mitigated quantum computing. The ultimate declared goal of this task force is therefore to trigger further research in the high-energy physics community to develop interesting use cases for demonstrations on near-term quantum computers.
+ 
+ 
+ 
+ 
+ Published by the American Physical Society
+ 2024
+ 
+ 
+
+
+
+**DOI:** 10.1103/PRXQuantum.5.037001
+
+**arXiv ID:** 2307.03236

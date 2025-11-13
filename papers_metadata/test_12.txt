@@ -1,0 +1,18 @@
+# A Survey of Important Issues in Quantum Computing and Communications
+
+**Authors:** Zebo Yang, Maede Zolanvari, R. Jain
+
+**Year:** 2023 | **Venue:** IEEE Communications Surveys and Tutorials
+
+**Citations:** 123 (Influential: 5)
+
+
+## TL;DR (AI Summary)
+The key elements of a quantum Internet are categorized into four important issues, which are investigated in detail: a) quantum computers, b) quantum networks, c) quantum cryptography, and d) quantum machine learning.
+
+
+## Abstract
+Driven by the rapid progress in quantum hardware, recent years have witnessed a furious race for quantum technologies in both academia and industry. Universal quantum computers have supported up to hundreds of qubits, while the scale of quantum annealers has reached three orders of magnitude (i.e., thousands of qubits). Quantum computing power keeps climbing. Race has consequently generated an overwhelming number of research papers and documents. This article provides an entry point for interested readers to learn the key aspects of quantum computing and communications from a computer science perspective. It begins with a pedagogical introduction and then reviews the key milestones and recent advances in quantum computing. In this article, the key elements of a quantum Internet are categorized into four important issues, which are investigated in detail: a) quantum computers, b) quantum networks, c) quantum cryptography, and d) quantum machine learning. Finally, the article identifies and discusses the main barriers, the major research directions, and trends.
+
+
+**DOI:** 10.1109/COMST.2023.3254481

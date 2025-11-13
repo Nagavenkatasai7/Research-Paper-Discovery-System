@@ -1,0 +1,10 @@
+# Physics-informed neural networks: A deep learning framework for solving forward and inverse problems involving nonlinear partial differential equations
+
+**Authors:** M. Raissi, P. Perdikaris, G. Karniadakis
+
+**Year:** 2019 | **Venue:** Journal of Computational Physics
+
+**Citations:** 12,829 (Influential: 885)
+
+
+**DOI:** 10.1016/J.JCP.2018.10.045

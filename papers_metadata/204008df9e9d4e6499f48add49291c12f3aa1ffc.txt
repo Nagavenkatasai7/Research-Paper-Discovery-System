@@ -1,0 +1,20 @@
+# A Review of Barren Plateaus in Variational Quantum Computing
+
+**Authors:** Martín Larocca, Supanut Thanasilp, Samson Wang, Kunal Sharma, Jacob Biamonte, Patrick J. Coles, L. Cincio, J. McClean, Zoe Holmes, M. Cerezo
+
+**Year:** 2024 | **Venue:** Nature Reviews Physics
+
+**Citations:** 253 (Influential: 8)
+
+
+## TL;DR (AI Summary)
+The latest understandings of barren plateaus are summarized, indicating its causes, architecture that will suffer from this phenomenon, and discusses strategies that can — and cannot — avoid it.
+
+
+## Abstract
+Variational quantum computing offers a flexible computational paradigm with applications in diverse areas. However, a key obstacle to realizing their potential is the Barren Plateau (BP) phenomenon. When a model exhibits a BP, its parameter optimization landscape becomes exponentially flat and featureless as the problem size increases. Importantly, all the moving pieces of an algorithm -- choices of ansatz, initial state, observable, loss function and hardware noise -- can lead to BPs when ill-suited. Due to the significant impact of BPs on trainability, researchers have dedicated considerable effort to develop theoretical and heuristic methods to understand and mitigate their effects. As a result, the study of BPs has become a thriving area of research, influencing and cross-fertilizing other fields such as quantum optimal control, tensor networks, and learning theory. This article provides a comprehensive review of the current understanding of the BP phenomenon.
+
+
+**DOI:** 10.1038/s42254-025-00813-9
+
+**arXiv ID:** 2405.00781

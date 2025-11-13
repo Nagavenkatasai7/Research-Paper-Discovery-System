@@ -1,0 +1,14 @@
+# An Introduction to Machine Learning
+
+**Authors:** M. Kubát
+
+**Year:** 2017 | **Venue:** Cambridge International Law Journal
+
+**Citations:** 4,379 (Influential: 319)
+
+
+## TL;DR (AI Summary)
+The first € price and the £ and $ price are net prices, subject to local VAT, and the second € price and the £ and $ price are net prices, subject to local VAT.
+
+
+**DOI:** 10.1007/978-3-319-63913-0

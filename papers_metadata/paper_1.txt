@@ -1,0 +1,11 @@
+# Attention Is All You Need
+
+**Authors:** Vaswani et al.
+
+**Year:** 2017 | **Venue:** NeurIPS
+
+**Citations:** 100,000 (Influential: 0)
+
+
+## Abstract
+Introduced the transformer architecture with self-attention mechanisms...
