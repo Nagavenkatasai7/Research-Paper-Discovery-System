@@ -19,10 +19,6 @@ langchain-openai==0.3.33
 langchain-text-splitters==0.3.11
 faiss-cpu==1.12.0
 
-# Multi-Agent System (using langchain instead of crewai for better compatibility)
-langgraph==0.2.0
-langsmith==0.1.0
-
 # Web Scraping and HTTP
 beautifulsoup4==4.12.3
 requests==2.32.5
@@ -39,10 +35,7 @@ feedparser==6.0.12
 pandas==2.2.0
 numpy==1.26.3
 
-# NLP and Text Processing
-spacy==3.8.7
-https://github.com/explosion/spacy-models/releases/download/en_core_web_sm-3.8.0/en_core_web_sm-3.8.0-py3-none-any.whl
-sentence-transformers==2.3.1
+# NLP - Basic
 tiktoken==0.11.0
 
 # Database
