@@ -3,14 +3,6 @@ Research Paper Discovery System - Main Streamlit Application
 A Google-like search interface for academic papers and research blog posts
 """
 
-# Fix for PyTorch + Streamlit file watcher issue
-# This prevents the "Examining the path of torch.classes" error
-try:
-    import torch
-    torch.classes.__path__ = []
-except (ImportError, AttributeError):
-    pass  # torch not installed or already patched
-
 import streamlit as st
 import pandas as pd
 from datetime import datetime
@@ -19,7 +11,7 @@ from typing import List, Dict, Optional
 # Import custom modules
 from api_clients import MultiAPISearcher
 from quality_scoring import PaperQualityScorer, PaperFilter
-from utils import (
+from app_utils import (
     generate_bibtex, format_authors, truncate_text,
     BlogPostSearcher, format_venue, get_paper_age_category
 )

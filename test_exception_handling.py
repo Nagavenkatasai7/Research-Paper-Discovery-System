@@ -158,7 +158,7 @@ def test_code_still_runs():
         # Test imports
         from rag_system.pdf_processor import PDFProcessor
         from rag_system.enhanced_rag import EnhancedRAGSystem
-        from utils import validate_url, clean_html
+        from app_utils import validate_url, clean_html
 
         print("  ✓ All imports successful")
 
