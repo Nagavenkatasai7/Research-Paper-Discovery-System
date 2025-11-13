@@ -5,10 +5,9 @@ streamlit==1.31.1
 anthropic
 openai==1.13.3
 
-# PDF Processing and Generation (proven versions)
+# PDF Processing and Generation (FIXED: Added PyMuPDF which is actually used)
 fpdf2
-PyPDF2==3.0.1
-pypdf==4.0.2
+PyMuPDF==1.23.26
 pdfplumber==0.10.4
 
 # RAG System Components (proven LangChain versions from Streamlit example)
@@ -17,14 +16,13 @@ langchain-community==0.0.24
 langchain-core==0.1.35
 langchain-openai==0.0.8
 langchain-text-splitters==0.0.1
-faiss-cpu
+faiss-cpu==1.8.0
 
-# Web Scraping and HTTP
+# Web Scraping and HTTP (removed selenium - not used in code)
 beautifulsoup4
 requests
 lxml
 aiohttp
-selenium
 
 # Academic APIs
 arxiv
