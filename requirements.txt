@@ -10,7 +10,6 @@ fpdf2==2.8.5
 PyPDF2==3.0.1
 pypdf==5.9.0
 pdfplumber==0.11.7
-PyMuPDF==1.26.5
 
 # RAG System Components
 langchain==0.3.27
@@ -19,11 +18,10 @@ langchain-core==0.3.79
 langchain-openai==0.3.33
 langchain-text-splitters==0.3.11
 faiss-cpu==1.12.0
-chromadb==1.1.1
 
-# Multi-Agent System (restored)
-crewai==0.201.1
-crewai-tools==0.75.0
+# Multi-Agent System (using langchain instead of crewai for better compatibility)
+langgraph==0.2.0
+langsmith==0.1.0
 
 # Web Scraping and HTTP
 beautifulsoup4==4.12.3
