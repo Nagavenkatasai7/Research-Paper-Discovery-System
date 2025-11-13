@@ -1,50 +1,50 @@
-# Core Web Framework
-streamlit==1.31.0
+# Core Web Framework (using proven version from Streamlit examples)
+streamlit==1.31.1
 
 # LLM and AI APIs
-anthropic==0.68.1
-openai==1.109.1
+anthropic
+openai==1.13.3
 
-# PDF Processing and Generation
-fpdf2==2.8.5
+# PDF Processing and Generation (proven versions)
+fpdf2
 PyPDF2==3.0.1
-pypdf==5.9.0
-pdfplumber==0.11.7
+pypdf==4.0.2
+pdfplumber==0.10.4
 
-# RAG System Components
-langchain==0.3.27
-langchain-community==0.3.30
-langchain-core==0.3.79
-langchain-openai==0.3.33
-langchain-text-splitters==0.3.11
-faiss-cpu==1.12.0
+# RAG System Components (proven LangChain versions from Streamlit example)
+langchain==0.1.9
+langchain-community==0.0.24
+langchain-core==0.1.35
+langchain-openai==0.0.8
+langchain-text-splitters==0.0.1
+faiss-cpu
 
 # Web Scraping and HTTP
-beautifulsoup4==4.12.3
-requests==2.32.5
-lxml==5.1.0
-aiohttp==3.9.3
-selenium==4.35.0
+beautifulsoup4
+requests
+lxml
+aiohttp
+selenium
 
 # Academic APIs
-arxiv==2.3.0
-semanticscholar==0.8.4
-feedparser==6.0.12
+arxiv
+feedparser
 
-# Data Processing
-pandas==2.2.0
-numpy==1.26.3
+# Data Processing (proven versions)
+pandas==2.2.1
+numpy==1.26.4
 
-# NLP - Basic
-tiktoken==0.11.0
+# NLP (proven versions from Streamlit example)
+sentence-transformers==2.4.0
+tiktoken==0.5.2
 
 # Database
-aiosqlite==0.21.0
+aiosqlite
 
 # Environment and Configuration
-python-dotenv==1.2.1
+python-dotenv
 
-# Additional Utilities
-Pillow==10.4.0
-python-dateutil==2.9.0.post0
-pydantic==2.11.9
+# Additional Utilities (proven versions)
+Pillow==10.3.0
+python-dateutil
+pydantic==1.10.14
