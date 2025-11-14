@@ -549,7 +549,6 @@ else:
                             # Generate comprehensive summary
                             synthesis_result = synthesis_agent.synthesize(
                                 comprehensive_result=analysis_result,
-                                paper_metadata={'title': st.session_state.uploaded_file_info['name']},
                                 temperature=0.3,
                                 max_tokens=3000
                             )
