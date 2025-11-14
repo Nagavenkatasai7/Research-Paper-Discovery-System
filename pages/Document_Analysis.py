@@ -240,7 +240,7 @@ if not st.session_state.analysis_in_progress:
     if uploaded_file is not None:
         # Display file info
         file_size_mb = uploaded_file.size / (1024 * 1024)
-        file_extension = Path(uploaded_file.name).suffix.lower()
+        file_extension = Path(uploaded_file.name).suffix.lstrip('.').lower()
 
         col1, col2, col3 = st.columns([2, 1, 1])
         with col1:
