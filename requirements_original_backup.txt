@@ -1,0 +1,50 @@
+# Core Web Framework (using proven version from Streamlit examples)
+streamlit==1.31.1
+
+# LLM and AI APIs
+anthropic
+openai==1.13.3
+
+# PDF Processing and Generation (proven versions)
+fpdf2
+PyPDF2==3.0.1
+pypdf==4.0.2
+pdfplumber==0.10.4
+
+# RAG System Components (proven LangChain versions from Streamlit example)
+langchain==0.1.9
+langchain-community==0.0.24
+langchain-core==0.1.35
+langchain-openai==0.0.8
+langchain-text-splitters==0.0.1
+faiss-cpu
+
+# Web Scraping and HTTP
+beautifulsoup4
+requests
+lxml
+aiohttp
+selenium
+
+# Academic APIs
+arxiv
+feedparser
+
+# Data Processing (proven versions)
+pandas==2.2.1
+numpy==1.26.4
+
+# NLP (proven versions from Streamlit example)
+sentence-transformers==2.4.0
+tiktoken==0.5.2
+
+# Database
+aiosqlite
+
+# Environment and Configuration
+python-dotenv
+
+# Additional Utilities (proven versions)
+Pillow==10.3.0
+python-dateutil
+pydantic==1.10.14
