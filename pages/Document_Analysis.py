@@ -26,7 +26,7 @@ import os
 from grok_client import GrokClient
 import config
 from rag_system.document_processor import DocumentProcessor
-from rag_system.analysis_agents import DocumentAnalysisOrchestrator
+from rag_system.analysis_agents import DocumentAnalysisOrchestrator, SynthesisAgent
 from rag_system.database import RAGDatabase
 
 # Custom CSS for modern UI
@@ -537,27 +537,50 @@ else:
 
                 st.markdown("---")
 
-                # Display agent results in tabs
+                # Display comprehensive summary
                 if analysis_result.get('success'):
-                    agent_results = analysis_result.get('analysis_results', {})
+                    st.markdown("### 📝 Comprehensive Summary")
 
-                    # Create tabs for each successful agent
-                    successful_agents = [aid for aid, res in agent_results.items() if res.get('success')]
+                    with st.spinner("🔄 Generating comprehensive summary from all agents..."):
+                        try:
+                            # Initialize synthesis agent
+                            synthesis_agent = SynthesisAgent()
 
-                    if successful_agents:
-                        tabs = st.tabs([f"{agent_metadata.get(aid, {}).get('icon', '📝')} {aid.title()}" for aid in successful_agents])
+                            # Generate comprehensive summary
+                            synthesis_result = synthesis_agent.synthesize(
+                                comprehensive_result=analysis_result,
+                                paper_metadata={'title': st.session_state.uploaded_file_info['name']},
+                                temperature=0.3,
+                                max_tokens=3000
+                            )
 
-                        for idx, agent_id in enumerate(successful_agents):
-                            with tabs[idx]:
-                                agent_result = agent_results[agent_id]
-                                analysis = agent_result.get('analysis', {})
+                            if synthesis_result.get('success'):
+                                # Format and display the synthesis
+                                formatted_summary = synthesis_agent.format_synthesis(synthesis_result)
 
-                                # Display analysis as formatted JSON
-                                st.json(analysis)
+                                # Display in a nice formatted text area
+                                st.markdown("""
+                                <div style='background-color: #f8f9fa; padding: 25px; border-radius: 10px; border-left: 4px solid #2b5278;'>
+                                """, unsafe_allow_html=True)
 
-                                # Show context info if available
-                                if enable_context and agent_result.get('context_aware'):
-                                    st.info(f"🔗 Context used from: {', '.join(agent_result.get('context_used', []))}")
+                                st.markdown(formatted_summary)
+
+                                st.markdown("</div>", unsafe_allow_html=True)
+
+                                # Show synthesis metadata
+                                col1, col2 = st.columns(2)
+                                with col1:
+                                    st.metric("Analysis Time", f"{synthesis_result.get('elapsed_time', 0):.1f}s")
+                                with col2:
+                                    st.metric("Tokens Used", f"{synthesis_result.get('tokens_used', 0):,}")
+                            else:
+                                st.error(f"❌ Failed to generate summary: {synthesis_result.get('message', 'Unknown error')}")
+
+                        except Exception as e:
+                            st.error(f"❌ Error generating summary: {str(e)}")
+                            # Fallback: show basic info
+                            agent_results = analysis_result.get('analysis_results', {})
+                            st.info(f"✅ Successfully analyzed {len(agent_results)} sections of the document.")
 
                 # Download results button
                 if st.button("💾 Download Analysis Report", type="primary", use_container_width=True):
