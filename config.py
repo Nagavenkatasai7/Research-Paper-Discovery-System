@@ -8,10 +8,23 @@ from dotenv import load_dotenv
 # Load environment variables from .env file
 load_dotenv()
 
+# Helper function to get secrets from both Streamlit Cloud and .env
+def get_secret(key: str, default: str = '') -> str:
+    """Get secret from Streamlit secrets or environment variable"""
+    try:
+        import streamlit as st
+        # Try Streamlit secrets first (for Streamlit Cloud)
+        if hasattr(st, 'secrets') and key in st.secrets:
+            return st.secrets[key]
+    except Exception:
+        pass
+    # Fall back to environment variable (for local development)
+    return os.getenv(key, default)
+
 # Semantic Scholar API Key (FREE - Get yours at: https://www.semanticscholar.org/product/api#api-key)
 # Without API key: 100 requests per 5 minutes (VERY SLOW!)
 # With API key: 1 request per second (300x FASTER!)
-SEMANTIC_SCHOLAR_API_KEY = os.getenv('SEMANTIC_SCHOLAR_API_KEY', '')
+SEMANTIC_SCHOLAR_API_KEY = get_secret('SEMANTIC_SCHOLAR_API_KEY', '')
 
 # API Rate Limits (seconds between requests)
 RATE_LIMITS = {
@@ -57,7 +70,7 @@ LLM_SETTINGS = {
 # Grok API Settings (xAI) - PRIMARY AND ONLY LLM
 GROK_SETTINGS = {
     'enabled': True,  # ✅ ONLY LLM in use (Ollama removed)
-    'api_key': os.getenv('GROK_API_KEY', ''),
+    'api_key': get_secret('GROK_API_KEY', ''),
     'model': 'grok-4-fast-reasoning',
     'available_models': [
         'grok-4-fast-reasoning',
