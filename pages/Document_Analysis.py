@@ -546,11 +546,11 @@ else:
                             # Initialize synthesis agent
                             synthesis_agent = SynthesisAgent()
 
-                            # Generate comprehensive summary
+                            # Generate comprehensive summary with parameters optimized for 2,000-3,000 word output
                             synthesis_result = synthesis_agent.synthesize(
                                 comprehensive_result=analysis_result,
-                                temperature=0.3,
-                                max_tokens=3000
+                                temperature=0.5,  # Higher temperature for detailed, creative analysis
+                                max_tokens=6000   # Enough tokens for 2,000-3,000+ words
                             )
 
                             if synthesis_result.get('success'):

@@ -239,15 +239,15 @@ IMPORTANT: This is a comprehensive research synthesis, not a brief summary. Ever
             }
 
     def synthesize(self, comprehensive_result: Dict,
-                   temperature: float = 0.3,
-                   max_tokens: int = 3000) -> Dict:
+                   temperature: float = 0.5,
+                   max_tokens: int = 6000) -> Dict:
         """
         Synthesize findings from all agents into comprehensive summary.
 
         Args:
             comprehensive_result: Result from DocumentAnalysisOrchestrator
-            temperature: LLM temperature (default 0.3)
-            max_tokens: Maximum tokens for synthesis (default 3000)
+            temperature: LLM temperature (default 0.5 for detailed creative writing)
+            max_tokens: Maximum tokens for synthesis (default 6000 for 2,000-3,000+ words)
 
         Returns:
             Synthesis result dictionary
@@ -272,9 +272,9 @@ IMPORTANT: This is a comprehensive research synthesis, not a brief summary. Ever
             system_prompt = self.get_system_prompt()
             user_prompt = self.get_user_prompt(agent_summaries, paper_metadata)
 
-            # Call Grok-4
+            # Call Grok-2-1212 (latest version for best quality)
             response = self.client.chat.completions.create(
-                model="grok-2-latest",
+                model="grok-2-1212",
                 messages=[
                     {"role": "system", "content": system_prompt},
                     {"role": "user", "content": user_prompt}
@@ -500,7 +500,7 @@ Original summary:
 Condensed summary ({target_sentences} sentence(s)):"""
 
             response = self.client.chat.completions.create(
-                model="grok-2-latest",
+                model="grok-2-1212",
                 messages=[
                     {"role": "system", "content": "You are an expert at condensing research paper summaries while preserving key information."},
                     {"role": "user", "content": prompt}
