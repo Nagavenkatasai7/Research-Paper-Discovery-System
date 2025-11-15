@@ -22,12 +22,194 @@ from datetime import datetime
 from typing import Dict, Optional
 import tempfile
 import os
+from fpdf import FPDF
 
 from grok_client import GrokClient
 import config
 from rag_system.document_processor import DocumentProcessor
 from rag_system.analysis_agents import DocumentAnalysisOrchestrator, SynthesisAgent
 from rag_system.database import RAGDatabase
+
+
+# PDF Generation Function
+def generate_pdf_report(synthesis_result: Dict, paper_metadata: Dict) -> bytes:
+    """
+    Generate a professional PDF report from synthesis results.
+
+    Args:
+        synthesis_result: Result from SynthesisAgent
+        paper_metadata: Paper metadata
+
+    Returns:
+        PDF file as bytes
+    """
+    pdf = FPDF()
+    pdf.set_auto_page_break(auto=True, margin=15)
+    pdf.add_page()
+
+    # Title Page
+    pdf.set_font('Arial', 'B', 24)
+    pdf.cell(0, 20, 'Research Paper Analysis Report', ln=True, align='C')
+    pdf.ln(10)
+
+    # Paper Info
+    pdf.set_font('Arial', 'B', 14)
+    pdf.cell(0, 10, 'Document Information', ln=True)
+    pdf.set_font('Arial', '', 11)
+    pdf.multi_cell(0, 8, f"Title: {paper_metadata.get('title', 'Unknown')}")
+    pdf.multi_cell(0, 8, f"Authors: {', '.join(paper_metadata.get('authors', ['Unknown']))}")
+    pdf.multi_cell(0, 8, f"Year: {paper_metadata.get('year', 'Unknown')}")
+    pdf.multi_cell(0, 8, f"Report Generated: {datetime.now().strftime('%Y-%m-%d %H:%M:%S')}")
+    pdf.ln(10)
+
+    if not synthesis_result.get('success'):
+        pdf.set_font('Arial', 'B', 12)
+        pdf.cell(0, 10, 'Analysis Failed', ln=True)
+        pdf.set_font('Arial', '', 11)
+        pdf.multi_cell(0, 8, synthesis_result.get('message', 'Unknown error'))
+        return pdf.output(dest='S').encode('latin-1')
+
+    synthesis = synthesis_result.get('synthesis', {})
+
+    # Executive Summary
+    pdf.add_page()
+    pdf.set_font('Arial', 'B', 16)
+    pdf.cell(0, 10, 'Executive Summary', ln=True)
+    pdf.ln(5)
+    pdf.set_font('Arial', '', 11)
+    exec_summary = synthesis.get('executive_summary', 'N/A')
+    pdf.multi_cell(0, 6, exec_summary)
+    pdf.ln(5)
+
+    # Key Contributions
+    pdf.set_font('Arial', 'B', 16)
+    pdf.cell(0, 10, 'Key Contributions', ln=True)
+    pdf.ln(5)
+    pdf.set_font('Arial', '', 11)
+    for i, contrib in enumerate(synthesis.get('key_contributions', []), 1):
+        pdf.multi_cell(0, 6, f"{i}. {contrib}")
+        pdf.ln(3)
+    pdf.ln(5)
+
+    # Research Context
+    pdf.add_page()
+    pdf.set_font('Arial', 'B', 16)
+    pdf.cell(0, 10, 'Research Context', ln=True)
+    pdf.ln(5)
+    pdf.set_font('Arial', '', 11)
+    pdf.multi_cell(0, 6, synthesis.get('research_context', 'N/A'))
+    pdf.ln(5)
+
+    # Methodology Assessment
+    pdf.add_page()
+    pdf.set_font('Arial', 'B', 16)
+    pdf.cell(0, 10, 'Methodology Assessment', ln=True)
+    pdf.ln(5)
+    pdf.set_font('Arial', '', 11)
+    pdf.multi_cell(0, 6, synthesis.get('methodology_assessment', 'N/A'))
+    pdf.ln(5)
+
+    # Results Significance
+    pdf.add_page()
+    pdf.set_font('Arial', 'B', 16)
+    pdf.cell(0, 10, 'Results Significance', ln=True)
+    pdf.ln(5)
+    pdf.set_font('Arial', '', 11)
+    pdf.multi_cell(0, 6, synthesis.get('results_significance', 'N/A'))
+    pdf.ln(5)
+
+    # Critical Themes
+    pdf.add_page()
+    pdf.set_font('Arial', 'B', 16)
+    pdf.cell(0, 10, 'Critical Themes', ln=True)
+    pdf.ln(5)
+    for theme in synthesis.get('critical_themes', []):
+        if isinstance(theme, dict):
+            pdf.set_font('Arial', 'B', 12)
+            pdf.multi_cell(0, 6, theme.get('theme', 'Theme'))
+            pdf.set_font('Arial', '', 11)
+            pdf.multi_cell(0, 6, theme.get('analysis', ''))
+            pdf.ln(3)
+    pdf.ln(5)
+
+    # Strengths
+    pdf.add_page()
+    pdf.set_font('Arial', 'B', 16)
+    pdf.cell(0, 10, 'Strengths', ln=True)
+    pdf.ln(5)
+    pdf.set_font('Arial', '', 11)
+    for i, strength in enumerate(synthesis.get('strengths', []), 1):
+        pdf.multi_cell(0, 6, f"{i}. {strength}")
+        pdf.ln(3)
+    pdf.ln(5)
+
+    # Limitations
+    pdf.set_font('Arial', 'B', 16)
+    pdf.cell(0, 10, 'Limitations', ln=True)
+    pdf.ln(5)
+    pdf.set_font('Arial', '', 11)
+    for i, lim in enumerate(synthesis.get('limitations', []), 1):
+        pdf.multi_cell(0, 6, f"{i}. {lim}")
+        pdf.ln(3)
+    pdf.ln(5)
+
+    # Future Directions
+    pdf.add_page()
+    pdf.set_font('Arial', 'B', 16)
+    pdf.cell(0, 10, 'Future Directions', ln=True)
+    pdf.ln(5)
+    pdf.set_font('Arial', '', 11)
+    for i, direction in enumerate(synthesis.get('future_directions', []), 1):
+        pdf.multi_cell(0, 6, f"{i}. {direction}")
+        pdf.ln(3)
+    pdf.ln(5)
+
+    # Overall Assessment
+    pdf.add_page()
+    pdf.set_font('Arial', 'B', 16)
+    pdf.cell(0, 10, 'Overall Assessment', ln=True)
+    pdf.ln(5)
+    assessment = synthesis.get('overall_assessment', {})
+    pdf.set_font('Arial', '', 11)
+    pdf.multi_cell(0, 6, f"Quality: {assessment.get('quality', 'N/A')}")
+    pdf.multi_cell(0, 6, f"Novelty: {assessment.get('novelty', 'N/A')}")
+    pdf.multi_cell(0, 6, f"Impact: {assessment.get('impact', 'N/A')}")
+    pdf.multi_cell(0, 6, f"Rigor: {assessment.get('rigor', 'N/A')}")
+    pdf.ln(5)
+    if assessment.get('overall_impression'):
+        pdf.set_font('Arial', 'B', 12)
+        pdf.cell(0, 8, 'Overall Impression:', ln=True)
+        pdf.set_font('Arial', '', 11)
+        pdf.multi_cell(0, 6, assessment.get('overall_impression', ''))
+    pdf.ln(5)
+
+    # Key Takeaways
+    pdf.add_page()
+    pdf.set_font('Arial', 'B', 16)
+    pdf.cell(0, 10, 'Key Takeaways', ln=True)
+    pdf.ln(5)
+    pdf.set_font('Arial', '', 11)
+    for i, takeaway in enumerate(synthesis.get('key_takeaways', []), 1):
+        pdf.multi_cell(0, 6, f"{i}. {takeaway}")
+        pdf.ln(3)
+    pdf.ln(5)
+
+    # Recommended Audience
+    pdf.add_page()
+    pdf.set_font('Arial', 'B', 16)
+    pdf.cell(0, 10, 'Recommended Audience', ln=True)
+    pdf.ln(5)
+    pdf.set_font('Arial', '', 11)
+    pdf.multi_cell(0, 6, synthesis.get('recommended_audience', 'N/A'))
+    pdf.ln(10)
+
+    # Footer - Analysis Metrics
+    pdf.set_font('Arial', 'I', 10)
+    pdf.cell(0, 8, f"Analysis Time: {synthesis_result.get('elapsed_time', 0):.2f}s | Tokens Used: {synthesis_result.get('tokens_used', 0):,}", ln=True, align='C')
+    pdf.cell(0, 8, 'Generated by Research Paper Discovery System', ln=True, align='C')
+
+    return pdf.output(dest='S').encode('latin-1')
+
 
 # Custom CSS for modern UI
 st.markdown("""
@@ -586,30 +768,47 @@ else:
                     st.session_state.synthesis_result = synthesis_result
                     st.session_state.formatted_summary = formatted_summary
 
-                # Create downloadable report
-                report_data = {
-                    'document': st.session_state.uploaded_file_info,
-                    'analysis_settings': {
-                        'depth': analysis_depth,
-                        'context_sharing': enable_context
-                    },
-                    'timestamp': datetime.now().isoformat(),
-                    'comprehensive_summary': st.session_state.get('formatted_summary', 'Summary not available'),
-                    'synthesis_metadata': {
-                        'elapsed_time': st.session_state.get('synthesis_result', {}).get('elapsed_time', 0),
-                        'tokens_used': st.session_state.get('synthesis_result', {}).get('tokens_used', 0)
-                    },
-                    'detailed_results': analysis_result
-                }
+                # Generate PDF report
+                try:
+                    paper_metadata = {
+                        'title': st.session_state.uploaded_file_info.get('name', 'Unknown'),
+                        'authors': ['Unknown'],  # Can be extracted from PDF metadata if available
+                        'year': datetime.now().year
+                    }
 
-                st.download_button(
-                    label="📥 Download Complete Analysis Report",
-                    data=json.dumps(report_data, indent=2, ensure_ascii=False),
-                    file_name=f"analysis_{st.session_state.uploaded_file_info['name'].replace('.pdf', '')}.json",
-                    mime="application/json",
-                    use_container_width=True,
-                    type="primary"
-                )
+                    # Use stored synthesis_result or create a basic one
+                    synthesis_for_pdf = st.session_state.get('synthesis_result', {
+                        'success': False,
+                        'message': 'Synthesis not available. Please re-run the analysis.',
+                        'synthesis': {}
+                    })
+
+                    pdf_bytes = generate_pdf_report(synthesis_for_pdf, paper_metadata)
+
+                    st.download_button(
+                        label="📄 Download PDF Report",
+                        data=pdf_bytes,
+                        file_name=f"analysis_{st.session_state.uploaded_file_info['name'].replace('.pdf', '')}.pdf",
+                        mime="application/pdf",
+                        use_container_width=True,
+                        type="primary"
+                    )
+                except Exception as e:
+                    st.error(f"❌ Failed to generate PDF: {str(e)}")
+                    # Fallback to JSON download
+                    report_data = {
+                        'document': st.session_state.uploaded_file_info,
+                        'timestamp': datetime.now().isoformat(),
+                        'comprehensive_summary': st.session_state.get('formatted_summary', 'Summary not available'),
+                        'error': f'PDF generation failed: {str(e)}'
+                    }
+                    st.download_button(
+                        label="📥 Download JSON Report (Fallback)",
+                        data=json.dumps(report_data, indent=2, ensure_ascii=False),
+                        file_name=f"analysis_{st.session_state.uploaded_file_info['name'].replace('.pdf', '')}.json",
+                        mime="application/json",
+                        use_container_width=True
+                    )
 
             # Cleanup
             os.unlink(tmp_path)
