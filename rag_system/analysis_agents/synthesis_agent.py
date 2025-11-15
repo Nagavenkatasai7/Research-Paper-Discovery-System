@@ -118,48 +118,101 @@ CONCLUSION ANALYSIS:
 
     def get_system_prompt(self) -> str:
         """Get system prompt for synthesis agent."""
-        return """You are an expert Research Synthesis Agent. Your role is to take findings
-from multiple specialized analysis agents and create a coherent, comprehensive summary
-of the entire research paper.
+        return """You are an expert Academic Research Synthesis Agent with expertise in producing
+comprehensive, publication-quality research analyses.
 
-Your synthesis should:
-1. Create a coherent narrative connecting all sections
-2. Identify cross-cutting themes and patterns
-3. Highlight the most important contributions and findings
-4. Provide context for how the work fits in the broader field
-5. Assess overall paper quality and impact
+Your role is to synthesize findings from 11 specialized analysis agents into a detailed,
+academically rigorous comprehensive report (targeting 2,000-3,000 words).
 
-Be concise, insightful, and focus on the big picture."""
+Your synthesis MUST:
+1. **Be Comprehensive**: Provide in-depth analysis, not surface-level summaries
+2. **Use Academic Style**: Professional, scholarly writing with proper structure
+3. **Provide Evidence**: Support all claims with specific examples from the analysis
+4. **Identify Themes**: Extract and elaborate on 5-7 major cross-cutting themes
+5. **Be Detailed**: Each section should have substantial content (150-400 words minimum)
+6. **Connect Ideas**: Create coherent narrative linking all agent findings
+7. **Assess Critically**: Evaluate strengths, limitations, and impact rigorously
+8. **Give Context**: Explain how this work fits in the broader research landscape
+
+Write as if preparing a detailed research briefing for academic stakeholders and decision-makers."""
 
     def get_user_prompt(self, agent_summaries: str, paper_metadata: Dict) -> str:
         """Get user prompt with agent summaries."""
-        return f"""Synthesize the following analyses from 7 specialized agents analyzing the paper
+        return f"""Create a COMPREHENSIVE ACADEMIC-QUALITY RESEARCH SYNTHESIS for the paper:
 "{paper_metadata.get('title', 'Unknown')}" by {', '.join(paper_metadata.get('authors', ['Unknown']))} ({paper_metadata.get('year', 'Unknown')}).
 
+DATA FROM 11 SPECIALIZED ANALYSIS AGENTS:
 {agent_summaries}
 
-Provide a comprehensive synthesis in JSON format:
+REQUIREMENTS: Generate a detailed, publication-ready synthesis (2,000-3,000 words) in JSON format.
+
+CRITICAL: Each field must contain SUBSTANTIAL, DETAILED content. Do NOT provide brief summaries.
 
 {{
-  "executive_summary": "2-3 paragraph overview of the entire paper",
-  "key_contributions": ["contribution 1", "contribution 2", "contribution 3"],
-  "research_context": "How this work fits in the broader field",
-  "methodology_assessment": "Assessment of research methods and approach",
-  "results_significance": "Significance and impact of the results",
-  "strengths": ["strength 1", "strength 2", "strength 3"],
-  "limitations": ["limitation 1", "limitation 2"],
-  "future_directions": ["direction 1", "direction 2", "direction 3"],
+  "executive_summary": "DETAILED 250-350 word executive summary covering: (1) research problem and objectives, (2) methodology approach, (3) key findings with specific results, (4) main contributions to the field, (5) primary conclusions and implications. Include quantitative results where available.",
+
+  "introduction": "COMPREHENSIVE 300-400 word introduction including: (1) research domain and context, (2) problem statement and motivation, (3) research gaps being addressed, (4) objectives and scope of the work, (5) significance to the field. Explain WHY this research matters.",
+
+  "key_contributions": [
+    "DETAILED contribution 1 (2-3 sentences explaining the contribution, why it's novel, and its impact)",
+    "DETAILED contribution 2 (2-3 sentences with specifics and significance)",
+    "DETAILED contribution 3 (2-3 sentences with evidence and implications)",
+    "At least 5-7 contributions total"
+  ],
+
+  "research_context": "IN-DEPTH 350-450 word analysis of: (1) current state of the field before this work, (2) existing approaches and their limitations, (3) how this work builds upon or departs from prior research, (4) theoretical frameworks applied, (5) positioning within the research landscape. Reference specific methodologies or theories where applicable.",
+
+  "methodology_assessment": "RIGOROUS 400-500 word evaluation covering: (1) research design and approach, (2) data collection methods and sources, (3) analytical techniques employed, (4) experimental setup or study design, (5) validation approaches, (6) methodological strengths, (7) potential methodological limitations. Be specific about techniques used.",
+
+  "results_significance": "DETAILED 400-500 word analysis of: (1) major findings with specific data/metrics, (2) statistical significance and effect sizes where applicable, (3) comparison to baselines or prior work, (4) practical implications of results, (5) theoretical implications, (6) generalizability of findings, (7) impact on current understanding. Include quantitative results.",
+
+  "critical_themes": [
+    {{"theme": "Theme 1 title", "analysis": "DETAILED 150-200 word analysis of this theme, including evidence from multiple agents, examples, and implications"}},
+    {{"theme": "Theme 2 title", "analysis": "DETAILED 150-200 word analysis with supporting evidence"}},
+    {{"theme": "Theme 3 title", "analysis": "DETAILED 150-200 word analysis"}},
+    "5-7 themes total, each with substantial analysis"
+  ],
+
+  "strengths": [
+    "DETAILED strength 1 (2-3 sentences explaining why this is a strength and its impact on the work's credibility)",
+    "DETAILED strength 2 with specific examples from the analysis",
+    "DETAILED strength 3 with evidence",
+    "At least 5-7 strengths"
+  ],
+
+  "limitations": [
+    "DETAILED limitation 1 (2-3 sentences explaining the limitation, its impact, and potential consequences)",
+    "DETAILED limitation 2 with specific concerns",
+    "DETAILED limitation 3 with implications",
+    "At least 4-6 limitations"
+  ],
+
+  "future_directions": [
+    "DETAILED direction 1 (2-3 sentences explaining the research direction, why it's important, and potential impact)",
+    "DETAILED direction 2 with rationale",
+    "DETAILED direction 3 with justification",
+    "At least 5-6 directions"
+  ],
+
   "overall_assessment": {{
-    "quality": "high/medium/low",
-    "novelty": "high/medium/low",
-    "impact": "high/medium/low",
-    "rigor": "high/medium/low"
+    "quality": "high/medium/low with 2-sentence justification",
+    "novelty": "high/medium/low with 2-sentence justification",
+    "impact": "high/medium/low with 2-sentence justification",
+    "rigor": "high/medium/low with 2-sentence justification",
+    "overall_impression": "DETAILED 200-250 word overall assessment synthesizing all aspects"
   }},
-  "recommended_audience": "Who should read this paper",
-  "key_takeaways": ["takeaway 1", "takeaway 2", "takeaway 3"]
+
+  "recommended_audience": "DETAILED 150-200 word description of target audiences, including: (1) primary audience and why, (2) secondary audiences, (3) required background knowledge, (4) specific use cases for different reader types",
+
+  "key_takeaways": [
+    "DETAILED takeaway 1 (2-3 sentences with context and significance)",
+    "DETAILED takeaway 2",
+    "DETAILED takeaway 3",
+    "At least 7-10 takeaways capturing all major insights"
+  ]
 }}
 
-Focus on creating a coherent narrative that connects insights from all sections."""
+IMPORTANT: This is a comprehensive research synthesis, not a brief summary. Every field should contain DETAILED, SUBSTANTIAL content with specific examples, evidence, and analysis. Target 2,000-3,000 total words across all fields."""
 
     def parse_response(self, raw_response: str) -> Dict:
         """Parse JSON response from Grok-4."""

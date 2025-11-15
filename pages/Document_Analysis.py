@@ -581,26 +581,35 @@ else:
                             agent_results = analysis_result.get('analysis_results', {})
                             st.info(f"✅ Successfully analyzed {len(agent_results)} sections of the document.")
 
-                # Download results button
-                if st.button("💾 Download Analysis Report", type="primary", use_container_width=True):
-                    # Create downloadable report
-                    report = {
-                        'document': st.session_state.uploaded_file_info,
-                        'analysis_settings': {
-                            'depth': analysis_depth,
-                            'context_sharing': enable_context
-                        },
-                        'timestamp': datetime.now().isoformat(),
-                        'results': analysis_result
-                    }
+                # Download results button - Store synthesis in session state if available
+                if 'synthesis_result' in locals() and synthesis_result.get('success'):
+                    st.session_state.synthesis_result = synthesis_result
+                    st.session_state.formatted_summary = formatted_summary
 
-                    st.download_button(
-                        label="📥 Download JSON Report",
-                        data=json.dumps(report, indent=2),
-                        file_name=f"analysis_{st.session_state.uploaded_file_info['name']}.json",
-                        mime="application/json",
-                        use_container_width=True
-                    )
+                # Create downloadable report
+                report_data = {
+                    'document': st.session_state.uploaded_file_info,
+                    'analysis_settings': {
+                        'depth': analysis_depth,
+                        'context_sharing': enable_context
+                    },
+                    'timestamp': datetime.now().isoformat(),
+                    'comprehensive_summary': st.session_state.get('formatted_summary', 'Summary not available'),
+                    'synthesis_metadata': {
+                        'elapsed_time': st.session_state.get('synthesis_result', {}).get('elapsed_time', 0),
+                        'tokens_used': st.session_state.get('synthesis_result', {}).get('tokens_used', 0)
+                    },
+                    'detailed_results': analysis_result
+                }
+
+                st.download_button(
+                    label="📥 Download Complete Analysis Report",
+                    data=json.dumps(report_data, indent=2, ensure_ascii=False),
+                    file_name=f"analysis_{st.session_state.uploaded_file_info['name'].replace('.pdf', '')}.json",
+                    mime="application/json",
+                    use_container_width=True,
+                    type="primary"
+                )
 
             # Cleanup
             os.unlink(tmp_path)
